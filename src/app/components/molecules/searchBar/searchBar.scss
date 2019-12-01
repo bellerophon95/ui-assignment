@@ -1,0 +1,12 @@
+.searchBar {
+  input {
+    background-color: #1b2127;
+    &::placeholder {
+      color: #90cdf4;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

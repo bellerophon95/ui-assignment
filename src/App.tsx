@@ -1,26 +1,27 @@
+import MoviesSearchPage from 'core/components/MoviesSearchPage';
+import LandingPage from 'core/components/LandingPage';
+
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+} from 'react-router-dom';
+import routes, {MODULE} from 'app/routes/baseRoutes';
 
 const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    return (
+        <Router>
+            <Switch>
+                <Route path={routes[MODULE.CORE].regexPath}>
+                    <MoviesSearchPage/>
+                </Route>
+                <Route path={routes[MODULE.LANDING_PAGE].regexPath}>
+                    <LandingPage/>
+                </Route>
+            </Switch>
+        </Router>
+    );
+};
 
 export default App;

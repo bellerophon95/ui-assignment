@@ -1,0 +1,22 @@
+.movieSearchPage {
+  background-color: #1b2127;
+}
+
+.navbarItem {
+  &:focus {
+    color: white;
+  }
+}
+
+.leftSection{
+  flex-basis: 75rem;
+}
+
+.rightSection{
+  flex-basis: 20rem;
+  box-shadow: 0 1px 10px 0 #0a0a0a;;
+}
+
+.sidePane{
+  background-color: #121a1f;
+}
